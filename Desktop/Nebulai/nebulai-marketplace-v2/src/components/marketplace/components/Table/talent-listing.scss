@@ -1,0 +1,59 @@
+@media (min-width: 768px) {
+    .default-talent-table.talent-profiles-table th:first-child,
+    .default-talent-table.talent-profiles-table td:first-child {
+      display: none;
+    }
+  
+  }
+  
+  /* Show the first column on small screens */
+  @media (max-width: 970px) {
+    .default-talent-table.talent-profiles-table th,
+    .default-talent-table.talent-profiles-table td {
+      display: none;
+    }
+    
+    .default-talent-table.talent-profiles-table th:first-child,
+    .default-talent-table.talent-profiles-table td:first-child {
+      display: table-cell;
+    }
+  
+    .default-talent-table.talent-profiles-table th:nth-child(3),
+    .default-talent-table.talent-profiles-table td:nth-child(3) {
+      display: table-cell;
+    }
+  
+    .default-talent-table.talent-profiles-table th:nth-child(8),
+    .default-talent-table.talent-profiles-table td:nth-child(8) {
+      display: table-cell;
+    }
+  
+    .default-talent-table.talent-profiles-table{
+      min-width: 250px !important;
+    }
+  }
+  
+  .hide-talent-cols th,
+  .hide-talent-cols td {
+    display: none;
+  }
+  
+  .hide-talent-cols th:first-child,
+  .hide-talent-cols td:first-child {
+    display: table-cell !important;
+  }
+  
+  .hide-talent-cols th:nth-child(3),
+  .hide-talent-cols td:nth-child(3) {
+    display: table-cell !important;
+  }
+  
+  .hide-talent-cols th:nth-child(8),
+  .hide-talent-cols td:nth-child(8) {
+    display: table-cell !important;
+  }
+  
+  /* Add any other common styles for the table */
+  .hide-talent-cols {
+    min-width: 250px !important;
+  }
