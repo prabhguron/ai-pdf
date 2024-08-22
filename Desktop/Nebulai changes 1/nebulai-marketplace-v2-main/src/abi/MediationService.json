@@ -1,0 +1,1701 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {
+        "name": "_governor",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_mediatorPool",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_vrfCoordinatorV2",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_keyHash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "_subscriptionId",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "_calculatedMarketplace",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_mediatorFlatFee",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "DISCLOSURE_PERIOD",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint24",
+        "internalType": "uint24"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "GOVERNOR",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "MARKETPLACE",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "PANEL_DRAWING_MULTIPLIER_APPEAL",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "PANEL_DRAWING_MULTIPLIER_NORMAL",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "PANEL_SELECTION_PERIOD",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint24",
+        "internalType": "uint24"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "PANEL_SIZE_APPEAL",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "PANEL_SIZE_NORMAL",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "REVEAL_PERIOD",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint24",
+        "internalType": "uint24"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "VOTING_PERIOD",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint24",
+        "internalType": "uint24"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "VRF_COORDINATOR",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract VRFCoordinatorV2Interface"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "acceptCase",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "appeal",
+    "inputs": [
+      {
+        "name": "_projectId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "arbiter",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "assignAdditionalMediators",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_additionalMediators",
+        "type": "address[]",
+        "internalType": "address[]"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "assignArbiter",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_arbiter",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "breakTie",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_arbiterVote",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "calculateMediationFee",
+    "inputs": [
+      {
+        "name": "isAppeal",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "callbackGasLimit",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "claimMediatorFees",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "commitVote",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_commit",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "createDispute",
+    "inputs": [
+      {
+        "name": "_projectId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_adjustedProjectFee",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_providerStakeForfeit",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_claimant",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_respondent",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "dismissUnpaidCase",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "disputeIds",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "_value",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "drawAdditionalMediators",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getCommit",
+    "inputs": [
+      {
+        "name": "_mediator",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getDispute",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct DataStructuresLibrary.Dispute",
+        "components": [
+          {
+            "name": "disputeId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "projectId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "adjustedProjectFee",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "providerStakeForfeit",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "claimant",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "respondent",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "mediationFee",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "feePaidClaimant",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "feePaidRespondent",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "disclosureStart",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "selectionStart",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "votingStart",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "revealStart",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "decisionRenderedDate",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "isAppeal",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "granted",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "phase",
+            "type": "uint8",
+            "internalType": "enum DataStructuresLibrary.Phase"
+          },
+          {
+            "name": "evidence",
+            "type": "string[]",
+            "internalType": "string[]"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getFeesHeld",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getMediatorFeesOwed",
+    "inputs": [
+      {
+        "name": "_mediator",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getMediatorStakeHeld",
+    "inputs": [
+      {
+        "name": "_mediator",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getPanel",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct DataStructuresLibrary.Panel",
+        "components": [
+          {
+            "name": "drawnMediators",
+            "type": "address[]",
+            "internalType": "address[]"
+          },
+          {
+            "name": "confirmedMediators",
+            "type": "address[]",
+            "internalType": "address[]"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getVote",
+    "inputs": [
+      {
+        "name": "_mediator",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "hasRevealedVote",
+    "inputs": [
+      {
+        "name": "_mediator",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "isConfirmedMediator",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_mediator",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "keyHash",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "mediatorFlatFee",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "mediatorPool",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IMediatorPool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "mediatorsNeeded",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "numWords",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "overdueCommit",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "overdueReveal",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "payMediationFee",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_evidenceURIs",
+        "type": "string[]",
+        "internalType": "string[]"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "payable"
+  },
+  {
+    "type": "function",
+    "name": "rawFulfillRandomWords",
+    "inputs": [
+      {
+        "name": "requestId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "randomWords",
+        "type": "uint256[]",
+        "internalType": "uint256[]"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "reclaimMediationFee",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "requestConfirmations",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint16",
+        "internalType": "uint16"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "requestDefaultDecision",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "revealVote",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_vote",
+        "type": "bool",
+        "internalType": "bool"
+      },
+      {
+        "name": "_salt",
+        "type": "string",
+        "internalType": "string"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setMediatorFlatFee",
+    "inputs": [
+      {
+        "name": "_flatFee",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setVrfConfig",
+    "inputs": [
+      {
+        "name": "_keyHash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "_subscriptionId",
+        "type": "uint64",
+        "internalType": "uint64"
+      },
+      {
+        "name": "_requestConfirmations",
+        "type": "uint16",
+        "internalType": "uint16"
+      },
+      {
+        "name": "_callbackGasLimit",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "_numWords",
+        "type": "uint32",
+        "internalType": "uint32"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "settledExternally",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "submitAdditionalEvidence",
+    "inputs": [
+      {
+        "name": "_disputeId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_evidenceURIs",
+        "type": "string[]",
+        "internalType": "string[]"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "subscriptionId",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint64",
+        "internalType": "uint64"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "votesTied",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "vrfRequestToDispute",
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "event",
+    "name": "AdditionalMediatorDrawingInitiated",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "requestId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "AdditionalMediatorsAssigned",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "assignedMediators",
+        "type": "address[]",
+        "indexed": false,
+        "internalType": "address[]"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "AppealCreated",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "originalDisputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "projectId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ArbiterAssigned",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "arbiter",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ArbiterVote",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "arbiter",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "vote",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "CaseDismissed",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "DecisionReached",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "decision",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      },
+      {
+        "name": "majorityVotes",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "DefaultDecisionEntered",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "claimedBy",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "decision",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "DisputeCreated",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "projectId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MediationFeePaid",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "user",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MediationFeeReclaimed",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "claimedBy",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MediatorConfirmed",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "mediatorAddress",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MediatorFeesClaimed",
+    "inputs": [
+      {
+        "name": "mediator",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MediatorRemoved",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "mediator",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "OverdueReveal",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "deadlocked",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PanelDrawn",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "isRedraw",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PanelSelectionInitiated",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "requestId",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RevealInitiated",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "SettledExternally",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "VoteCommitted",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "mediator",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "commit",
+        "type": "bytes32",
+        "indexed": false,
+        "internalType": "bytes32"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "VoteRevealed",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "mediator",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "vote",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "VotingInitiated",
+    "inputs": [
+      {
+        "name": "disputeId",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "error",
+    "name": "MediationService__AlreadyConfirmedMediator",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__AlreadyRevealed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__CannotRevealBeforeAllVotesCommitted",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__CaseNotDeadlocked",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__DisputeCannotBeAppealed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__DisputeDoesNotExist",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__EvidenceCanNoLongerBeSubmitted",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__FeesNotOverdue",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__InitialSelectionPeriodStillOpen",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__InsufficientAmount",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__InsufficientMediatorStake",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__InvalidArbiter",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__InvalidCommit",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__InvalidMediator",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__MediationFeeAlreadyPaid",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__MediationFeeAlreadyReclaimed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__MediationFeeCannotBeReclaimed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__MediationFeeNotPaid",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__MediatorHasAlreadyCommmitedVote",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__MediatorSeatsFilled",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__NoMediatorFeesOwed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__NoOverdueCommits",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__NotDrawnMediator",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__OnlyAdmin",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__OnlyDisputant",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__OnlyDuringDisclosure",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__OnlyDuringPanelSelection",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__OnlyDuringReveal",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__OnlyGovernor",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__OnlyMarketplace",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__OnlyPrevailingParty",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__PanelAlreadyRedrawn",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__PanelNotRedrawn",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__ProjectHasOpenDispute",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__ProjectIsNotDisputed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__RevealDoesNotMatchCommit",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__RevealPeriodStillActive",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__TransferFailed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__VoteHasNotBeenRevealed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "MediationService__VotingPeriodStillActive",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "OnlyCoordinatorCanFulfill",
+    "inputs": [
+      {
+        "name": "have",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "want",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  }
+]

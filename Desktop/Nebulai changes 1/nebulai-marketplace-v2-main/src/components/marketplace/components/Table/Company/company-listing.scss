@@ -1,0 +1,59 @@
+@media (min-width: 768px) {
+    .default-company-table.company-profiles-table th:first-child,
+    .default-company-table.company-profiles-table td:first-child {
+      display: none;
+    }
+  
+  }
+  
+  /* Show the first column on small screens */
+  @media (max-width: 970px) {
+    .default-company-table.company-profiles-table th,
+    .default-company-table.company-profiles-table td {
+      display: none;
+    }
+    
+    .default-company-table.company-profiles-table th:first-child,
+    .default-company-table.company-profiles-table td:first-child {
+      display: table-cell;
+    }
+  
+    .default-company-table.company-profiles-table th:nth-child(3),
+    .default-company-table.company-profiles-table td:nth-child(3) {
+      display: table-cell;
+    }
+  
+    .default-company-table.company-profiles-table th:nth-child(8),
+    .default-company-table.company-profiles-table td:nth-child(8) {
+      display: table-cell;
+    }
+  
+    .default-company-table.company-profiles-table{
+      min-width: 250px !important;
+    }
+  }
+  
+  .hide-company-cols th,
+  .hide-company-cols td {
+    display: none;
+  }
+  
+  .hide-company-cols th:first-child,
+  .hide-company-cols td:first-child {
+    display: table-cell !important;
+  }
+  
+  .hide-company-cols th:nth-child(3),
+  .hide-company-cols td:nth-child(3) {
+    display: table-cell !important;
+  }
+  
+  .hide-company-cols th:nth-child(8),
+  .hide-company-cols td:nth-child(8) {
+    display: table-cell !important;
+  }
+  
+  /* Add any other common styles for the table */
+  .hide-company-cols {
+    min-width: 250px !important;
+  }
